@@ -1,90 +1,146 @@
-*{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+
+:root {
+  --color-white: #f3f3f3;
+  --light-gray: #ced4da;
+  --light-blue: #0040ff80;
+  --color-darkblue-alpha: #030305cc;
+  --background-gradient: linear-gradient(120deg, #49494b, #1a1e27);
+  --button-gradient: linear-gradient(120deg, #2f2e33, #242235, #1a1827);
 }
 
-#titulo{
-    font-family: sans-serif;
-    color: #380B61;
-    margin-left: 7%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-#subtitulo{
-    font-family: sans-serif;
-    color: #380B61;
-    margin-left: 10%;
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+  background: var(--background-gradient);
 }
 
-#fieldset{
-    border: 0;
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
 }
 
-body{
-    background-color: #F0F8FF;
-    font-family: sans-serif;
-    font-size: 1em;
-    color: #59429d;
-    margin-left: 36%;
-    margin-top: 2%;
-    justify-content: center;
+p {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 1px #000;
 }
 
-input, select, textarea, button{
-    border-radius: 5px;
+.page-description {
+  text-align: center;
+  opacity: 0.8;
 }
 
-.campo{
-    margin-bottom: 1em;
+.header {
+  padding: 0 10px;
+  margin-bottom: 30px;
 }
 
-.campo label{
-    margin-bottom: 0.2em;
-    color: #59429d;
-    display: block;
+label {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 8px;
 }
 
-fieldset.grupo .campo{
-    float: left;
-    margin-right: 1em;
+input, button, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
-.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea{
-    padding: 0.2em;
-    border: 1px solid #59429d;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    display: block;
+.container {
+  width: 100%;
+  margin: 50px auto 0 auto;
+  max-width: 540px;
+  max-width: 720px;
 }
 
-.campo select option{
-    padding-right: 1em;
+form {
+  background: var(--color-darkblue-alpha);
+  padding: 40px 10px;
+  border-radius: 4px;
+  padding: 40px;
 }
 
-.campo input:focus, .campo select:focus, .campo textarea:focus{
-    background: #E0E0F8;
+.form-dev {
+  margin: 0 auto 20px auto;
+  padding: 4px;
 }
 
-.botao{
-    font-size: 1.2em;
-    background: #59429B;
-    border: 0;
-    margin-bottom: 1em;
-    color: white;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5); 
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+.form-level {
+  display: block;
+  width: 100%;
+  height: 38px;
+  padding: 6px 12px;
+  background-clip: padding-box;
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
 }
 
-.botao:hover{
-    background: #CCBBFF;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: none;
+.form-level:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px var(--light-blue);
 }
 
-#check{
-    display: inline-block;
+.input-radio, .input-checkbox {
+  display: inline-block;
+  margin-right: 10px;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 10px;
+  resize: vertical;
+  outline: 0;
+}
+  
+.input-textarea:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px var(--light-blue);
+}
+
+button {
+  border: none;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: var(--button-gradient);
+  background-size: 200%;
+  transition: 0.3s ease-in-out;
+  color: inherit;
+  font-size: 18px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-position: right;
+}
+
+#languages {
+  display: inline-flex;
+  margin-right: 10px;
+  margin-top: 5px;
 }
